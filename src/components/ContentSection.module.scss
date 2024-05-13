@@ -1,0 +1,56 @@
+.container {
+    padding: 4.5rem 0;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 8px solid #272727;
+
+    .content {
+        position: relative;
+        display: flex;
+        width: fit-content;
+        max-width: calc(66.66666666666666% - 6rem);
+        max-height: 439px;
+        height: fit-content;
+        gap: .4em;
+
+        &.alternative {
+            flex-direction: row-reverse;
+        }
+
+        .text {
+            position: relative;
+            display: flex;
+            width: 50%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1em;
+
+            h2 {
+                font-size: 3rem;
+                font-weight: 900;
+                color: #fff;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #fff;
+            }
+        }
+
+        .image {
+            position: relative;
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: fit-content;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

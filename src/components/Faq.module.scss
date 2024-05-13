@@ -1,0 +1,82 @@
+.container {
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem 0;
+    border-bottom: 8px solid #272727;
+
+    .content {
+        max-width: calc(66.66666666666666% - 6rem);
+        width: 100%;
+
+        h2 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .questions {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            margin-top: 1.5em;
+
+            ul {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: fit-content;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: .5em;
+
+                li {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    height: fit-content;
+                    background-color: rgb(45, 45, 45);
+
+                    h3 {
+                        width: 100%;
+
+                        button {
+                            position: relative;
+                            display: flex;
+                            width: 100%;
+                            background: transparent;
+                            padding: 1.8em;
+                            justify-content: space-between;
+                            align-items: center;
+                            border: none;
+
+                            span {
+                                font-size: 1.5rem;
+                                color: #fff;
+                            }
+
+                            svg {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .subscriptionContainer {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2.85rem;
+        }
+    }
+}

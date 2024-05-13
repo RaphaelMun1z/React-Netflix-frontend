@@ -1,0 +1,51 @@
+.languageSelect {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #6c6c6c;
+    border-radius: 0.25rem;
+    padding: .3rem .7rem;
+    line-height: 1.25rem;
+    color: #fff;
+    backdrop-filter: blur(5px);
+    align-items: center;
+    gap: .5em;
+    cursor: pointer;
+
+    &.alternative {
+        background-color: rgba(255, 255, 255, .05);
+    }
+
+    .select {
+        position: relative;
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        border: none;
+        background: transparent;
+        font-size: inherit;
+        color: #fff;
+        appearance: none;
+        pointer-events: visible;
+        padding: 0 1.5em;
+
+        option {
+            position: relative;
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    svg {
+        position: absolute;
+
+        &.languageIcon {
+            font-size: 12pt;
+            left: 10px;
+        }
+
+        font-size: 15pt;
+        right: 10px;
+    }
+}

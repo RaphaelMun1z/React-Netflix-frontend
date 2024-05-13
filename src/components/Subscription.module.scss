@@ -1,0 +1,93 @@
+.form {
+    padding: 0 2rem;
+    max-width: 61.5rem;
+
+    form {
+        .alternativeText {
+            font-size: 1.25rem !important;
+            line-height: 1.5;
+            color: #fff;
+            text-align: center;
+        }
+
+        .inputContainer {
+            position: relative;
+            display: flex;
+            width: 100%;
+            max-width: 36.625rem;
+            height: fit-content;
+            align-items: center;
+            gap: .5em;
+            margin: auto;
+            margin-top: 1em;
+
+            .inputText {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 100%;
+                flex: 1 1 auto;
+                min-width: 12.5rem;
+                line-height: 1.5;
+                font-size: 1rem;
+                background: rgba(22, 21, 21, 0.7);
+                border: 1px solid #6c6c6c;
+                border-radius: 5px;
+                color: #fff;
+
+                label {
+                    position: absolute;
+                    display: none;
+                    color: #bdbdbd;
+                }
+
+                input {
+                    position: relative;
+                    display: flex;
+                    line-height: 1.5;
+                    font-size: 1rem;
+                    color: #fff;
+                    height: 100%;
+                    padding: 1rem;
+                    border: none;
+                    background: transparent;
+
+                    &::placeholder {
+                        color: #fff;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: #fff;
+                    }
+
+                    &::-moz-placeholder {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .submitButton {
+                position: relative;
+                display: flex;
+                width: fit-content;
+                flex: 0 0 auto;
+                height: fit-content;
+                font-size: 1.5rem;
+                font-weight: 600;
+                min-height: 3.5rem;
+                padding: 0.75rem 1.5rem;
+                background: var(--main-color);
+                color: #fff;
+                border: none;
+                border-radius: 0.1875rem;
+                gap: .4em;
+                align-items: center;
+
+                svg {
+                    font-size: 20pt;
+                }
+            }
+        }
+    }
+}

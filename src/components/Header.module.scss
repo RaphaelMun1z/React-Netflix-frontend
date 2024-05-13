@@ -1,0 +1,53 @@
+header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    max-width: calc(66.66666666666666% - 6rem);
+    height: fit-content;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+
+    .logo {
+        position: relative;
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+
+        svg {
+            width: 9.25rem;
+            height: 2.5rem;
+            color: rgb(229, 9, 20);
+            fill: rgb(229, 9, 20);
+        }
+    }
+
+    .actions {
+        position: relative;
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        gap: 1.5rem;
+        align-items: center;
+
+        .accessButton {
+            position: relative;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            background-color: var(--main-color);
+            padding: .5em 1.2em;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #fff;
+            border: 0.0625rem solid #000;
+            cursor: pointer;
+        }
+    }
+}
