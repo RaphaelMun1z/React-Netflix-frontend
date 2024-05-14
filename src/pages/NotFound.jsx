@@ -1,8 +1,12 @@
-import React from 'react'
+import NotFoundSection from '../components/NotFoundSection'
+import AlternativeHeader from '../components/AlternativeHeader'
 
 const NotFound = () => {
   return (
-    <div>Página não encontrada.</div>
+    <>
+      <AlternativeHeader />
+      <NotFoundSection />
+    </>
   )
 }
 

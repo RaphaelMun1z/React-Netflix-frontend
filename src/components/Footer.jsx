@@ -2,6 +2,7 @@ import styles from './Footer.module.scss'
 
 // Components
 import LanguageSelect from './LanguageSelect';
+import { Link } from 'react-router-dom';
 
 const Footer = ({ isAlternative = false, isDarkTheme = false }) => {
     return (
@@ -25,9 +26,9 @@ const Footer = ({ isAlternative = false, isDarkTheme = false }) => {
                     <li>Entre em contato</li>
                     <li>Teste de velocidade</li>
                     <li>Avisos legais</li>
-                    <li>Só na Netflix</li>
+                    <li><Link to="/browse">Só na Netflix</Link></li>
                 </ul>
-                <LanguageSelect isAlternative={true} isDarkTheme={isDarkTheme}/>
+                <LanguageSelect isAlternative={true} isDarkTheme={isDarkTheme} />
                 <p className={styles.copyright}>Netflix Brasil</p>
             </div>
         </footer>

@@ -34,7 +34,7 @@
             max-width: 100%;
             overflow-x: hidden;
 
-            li {
+            a {
                 position: relative;
                 display: flex;
                 flex-wrap: wrap;
@@ -42,18 +42,39 @@
                 justify-content: center;
                 align-items: center;
                 width: 299px;
+                min-width: 299px;
                 height: fit-content;
 
                 img {
                     position: relative;
                     display: flex;
                     height: 168px;
-                    background-color: gold;
+                    width: 100%;
+                    background-color: #888;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
                 }
 
                 p {
                     font-size: 16px;
                     margin-top: 2px;
+                }
+            }
+
+            .contentLoading {
+                width: 299px;
+                min-width: 299px;
+                height: 197px;
+                background: #eee;
+                background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+                background-size: 200% 100%;
+                animation: 1.5s shine linear infinite;
+            }
+
+            @keyframes shine {
+                to {
+                    background-position-x: -200%;
                 }
             }
         }
@@ -73,7 +94,7 @@
             padding-bottom: 13.5px;
             padding-left: .3em;
 
-            svg{
+            svg {
                 width: 23px;
                 height: 23px;
             }

@@ -78,9 +78,9 @@
                     width: fit-content;
                     height: fit-content;
                     color: #fff;
-                    font-size: 24px;
+                    font-size: 44pt;
                     font-weight: 500;
-                    line-height: 30px;
+                    line-height: 58px;
                 }
 
                 .generalInfo {
@@ -149,6 +149,7 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: bottom;
+                mask-image: linear-gradient(to left, rgb(0, 0, 0) 40%, rgba(0,0,0,0));
 
                 img {
                     position: relative;

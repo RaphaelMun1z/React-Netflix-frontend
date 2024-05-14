@@ -1,23 +1,45 @@
-import { Link } from 'react-router-dom'
 import styles from './Banner.module.scss'
 
-const Banner = () => {
+import { Link } from 'react-router-dom'
+
+import React, { useState, useEffect } from 'react'
+
+const Banner = ({ content }) => {
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        if (content) {
+            setLoading(false)
+        }
+    }, [content])
+
+    const getYear = (date) => {
+        const dataObj = new Date(date);
+
+        return dataObj.getFullYear();
+    }
+
+    if (loading) {
+        return (
+            <p>Carregando...</p>
+        )
+    }
+
     return (
         <section className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.banner}>
                     <div className={styles.itemData}>
-                        <img className={styles.image} src="https://occ-0-1837-1740.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABfq9J_i7czLRDTMSZr-HTqflyWJIQwiBPqc1F5qPGUiegLbkDlw0wwQ3MK8bN4ei4YqJUzXZzR2sdBds2dMaoOmex6VcHptCS0NVQA-RfMLt-WgjTIbwkpOHCb3jHyOEZtKxXWPOntTTlhryQaB-1Fg13Qg4_gOdW1SSF1J_ENMl4HmsjxQ5fw.png?r=53c" alt="Title image" />
-                        <p className={styles.title}>La casa de papel</p>
-                        <p className={styles.generalInfo}>2017 | <span>A16</span> | 5 temporadas | Suspense</p>
-                        <p className={styles.description}>Oito ladrões se trancam com reféns na Casa da Moeda da Espanha. Seu líder manipula a polícia para realizar um plano. Será o maior roubo da história, ou uma missão em vão?</p>
+                        <p className={styles.title}>{content.title}</p>
+                        <p className={styles.generalInfo}>{getYear(content.release_date)} | <span>{content.adult ? (<>A18</>) : (<>AL</>)}</span> | {content.runtime}min {content.season_number && (<>| {season_number} temporadas</>)} {content.genres && content.genres.map((genre, index) => (<React.Fragment key={index}>| {genre.name} </React.Fragment>))}</p>
+                        <p className={styles.description}>{content.overview}</p>
                         <div className={styles.extraInfo}>
-                            <p><span>Estrelando:</span>Úrsula Corberó,Álvaro Morte,Itziar Ituño</p>
-                            <p><span>Criação:</span>Álex Pina</p>
+                            <p><span>Criação:</span>{content.production_companies && content.production_companies.map((prod, index) => (<React.Fragment key={index}>{index !== 0 && (<>, </>)}{prod.name}</React.Fragment>))}.</p>
+                            <p><span>Avaliação:</span>{content.vote_average}</p>
                         </div>
                     </div>
                     <div className={styles.itemImage}>
-                        <div className={styles.imageContainer}></div>
+                        <div className={styles.imageContainer} style={{ backgroundImage: `url('https://image.tmdb.org/t/p/original/${content.backdrop_path}')` }}></div>
                     </div>
                 </div>
                 <div className={styles.watch}>
