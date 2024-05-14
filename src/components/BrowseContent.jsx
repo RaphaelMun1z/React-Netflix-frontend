@@ -8,10 +8,13 @@ import { Link } from 'react-router-dom'
 import ContentTopicSlider from './ContentTopicSlider'
 
 const BrowseContent = () => {
-  const [content, setContent] = useState([])
+  const [newContent, setNewContent] = useState([])
+  const [popularContent, setPopularContent] = useState([])
+  const [topRatedContent, setTopRatedContent] = useState([])
+  const [upcomingContent, setUpcomingContent] = useState([])
 
   useEffect(() => {
-    async function loadContent() {
+    async function loadNewContent() {
       const res = await api.get("movie/now_playing", {
         params: {
           api_key: "08c9b7ec6eb6d2d5f947cfab93ce221d",
@@ -20,10 +23,49 @@ const BrowseContent = () => {
         }
       })
 
-      setContent(res.data.results.slice(0, 10))
+      setNewContent(res.data.results.slice(0, 10))
     }
 
-    loadContent()
+    async function loadPopularContent() {
+      const res = await api.get("movie/popular", {
+        params: {
+          api_key: "08c9b7ec6eb6d2d5f947cfab93ce221d",
+          language: "pt-BR",
+          page: 1,
+        }
+      })
+
+      setPopularContent(res.data.results.slice(0, 10))
+    }
+
+    async function loadTopRatedContent() {
+      const res = await api.get("movie/top_rated", {
+        params: {
+          api_key: "08c9b7ec6eb6d2d5f947cfab93ce221d",
+          language: "pt-BR",
+          page: 1,
+        }
+      })
+
+      setTopRatedContent(res.data.results.slice(0, 10))
+    }
+
+    async function loadUpcomingContent() {
+      const res = await api.get("movie/upcoming", {
+        params: {
+          api_key: "08c9b7ec6eb6d2d5f947cfab93ce221d",
+          language: "pt-BR",
+          page: 1,
+        }
+      })
+
+      setUpcomingContent(res.data.results.slice(0, 10))
+    }
+
+    loadNewContent()
+    loadPopularContent()
+    loadTopRatedContent()
+    loadUpcomingContent()
 
     return () => {
       console.log("Componente desmontado!")
@@ -33,20 +75,12 @@ const BrowseContent = () => {
   return (
     <section className={styles.container}>
       <div className={styles.contentSection}>
-        <ContentTopicSlider title="Novidades na Netflix" content={content} />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider />
-        <ContentTopicSlider embassy={true} />
-        <ContentTopicSlider embassy={true} />
+        <ContentTopicSlider title="Assista em um fim de semana" content={popularContent} />
+        <ContentTopicSlider title="Novidades na Netflix" content={newContent} />
+        <ContentTopicSlider title="Filmes aclamados pela crítica" content={topRatedContent} />
+        <ContentTopicSlider title="Descubra suas próximas histórias" content={upcomingContent} />
+        <ContentTopicSlider title="Descubra suas próximas histórias" content={popularContent} embassy={true} />
+        <ContentTopicSlider title="Descubra suas próximas histórias" content={topRatedContent} embassy={true} />
       </div>
       <div className={styles.advertaismentMessage}>
         <div className={styles.content}>
