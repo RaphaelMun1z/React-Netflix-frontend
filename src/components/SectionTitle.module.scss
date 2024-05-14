@@ -1,0 +1,35 @@
+.sectionTitle {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    padding: 0 3%;
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: fit-content;
+        max-width: 598px;
+        height: fit-content;
+        gap: .5em;
+        padding-top: 7vw;
+
+        h1 {
+            font-size: 3.25rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+            color: #fff;
+            font-weight: 900;
+        }
+
+        p {
+            font-weight: 300;
+            color: #fff;
+            font-size: 19px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.contentSliderContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    gap: 1em;
+    margin-top: 40px;
+
+    &.embassy {
+        filter: blur(10px);
+    }
+
+    p {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 27px;
+    }
+
+    .slider {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 16px;
+
+        ul {
+            position: relative;
+            display: flex;
+            gap: 12px;
+            max-width: 100%;
+            overflow-x: hidden;
+
+            li {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 299px;
+                height: fit-content;
+
+                img {
+                    position: relative;
+                    display: flex;
+                    height: 168px;
+                    background-color: gold;
+                }
+
+                p {
+                    font-size: 16px;
+                    margin-top: 2px;
+                }
+            }
+        }
+
+        .nextButton {
+            position: absolute;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            justify-content: center;
+            align-items: center;
+            color: var(--main-color);
+            margin: auto;
+            top: 50%;
+            right: 0;
+            transform: translateX(100%) translateY(-50%);
+            padding-bottom: 13.5px;
+            padding-left: .3em;
+
+            svg{
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+}

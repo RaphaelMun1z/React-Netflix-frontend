@@ -3,9 +3,9 @@ import styles from './Footer.module.scss'
 // Components
 import LanguageSelect from './LanguageSelect';
 
-const Footer = () => {
+const Footer = ({ isAlternative = false, isDarkTheme = false }) => {
     return (
-        <footer>
+        <footer className={`${isAlternative ? styles.alternative : ''}`}>
             <div className={styles.footerNavigation}>
                 <p>Dúvidas? Ligue <span>0800 591 2876</span></p>
                 <ul>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <li>Avisos legais</li>
                     <li>Só na Netflix</li>
                 </ul>
-                <LanguageSelect isAlternative={true} />
+                <LanguageSelect isAlternative={true} isDarkTheme={isDarkTheme}/>
                 <p className={styles.copyright}>Netflix Brasil</p>
             </div>
         </footer>

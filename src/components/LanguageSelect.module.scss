@@ -13,6 +13,18 @@
     gap: .5em;
     cursor: pointer;
 
+    &.darkTheme {
+        background-color: #000 !important;
+        color: #737373 !important;
+        border-color: #383838;
+        padding: 12px 1rem;
+
+        select {
+            color: #737373 !important;
+            font-size: 13px;
+        }
+    }
+
     &.alternative {
         background-color: rgba(255, 255, 255, .05);
     }
@@ -27,13 +39,14 @@
         font-size: inherit;
         color: #fff;
         appearance: none;
-        pointer-events: visible;
         padding: 0 1.5em;
+        cursor: pointer;
 
         option {
             position: relative;
             display: flex;
             width: 100%;
+            cursor: pointer;
         }
     }
 

@@ -2,20 +2,20 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 // Pages
 import Home from './pages/Home'
-
-// Components
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Browse from './pages/Browse'
+import Single from './pages/Single'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/browse' element={<Browse />} />
+          <Route path='/title/:id' element={<Single />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
   )

@@ -8,6 +8,28 @@ footer {
     align-items: center;
     padding: 4.5rem 0;
 
+    &.alternative {
+        .footerNavigation {
+            width: 90%;
+            max-width: inherit;
+
+            p,
+            ul>li {
+                color: #737373 !important;
+                text-decoration: none !important;
+            }
+
+            ul {
+                max-width: 1000px;
+
+                li {
+                    font-size: 13px !important;
+                    flex: 0 0 calc(25% - 0.75rem) !important;
+                }
+            }
+        }
+    }
+
     .footerNavigation {
         position: relative;
         display: flex;

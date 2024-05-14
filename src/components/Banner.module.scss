@@ -1,0 +1,233 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 0 9vw;
+        overflow-x: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(0deg, #181818 0, hsla(0, 0%, 9%, .987) 1.62%, hsla(0, 0%, 9%, .951) 3.1%, hsla(0, 0%, 9%, .896) 4.5%, hsla(0, 0%, 9%, .825) 5.8%, hsla(0, 0%, 9%, .741) 7.06%, hsla(0, 0%, 9%, .648) 8.24%, hsla(0, 0%, 9%, .55) 9.42%, hsla(0, 0%, 9%, .45) 10.58%, hsla(0, 0%, 9%, .352) 11.76%, hsla(0, 0%, 9%, .259) 12.94%, hsla(0, 0%, 9%, .175) 14.2%, hsla(0, 0%, 9%, .104) 15.5%, hsla(0, 0%, 9%, .049) 16.9%, hsla(0, 0%, 9%, .013) 18.38%, hsla(0, 0%, 9%, 0) 20%);
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            z-index: 20;
+        }
+
+        .banner {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+
+            .itemData {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 40%;
+                max-width: 800px;
+                min-width: 500px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 16px 32px 64px 0;
+                z-index: 2;
+                gap: 1em;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: linear-gradient(90deg, #181818 10%, hsla(0, 0%, 9%, .98) 20%, hsla(0, 0%, 9%, .97) 25%, hsla(0, 0%, 9%, .95) 35%, hsla(0, 0%, 9%, .94) 40%, hsla(0, 0%, 9%, .92) 45%, hsla(0, 0%, 9%, .9) 50%, hsla(0, 0%, 9%, .87) 55%, hsla(0, 0%, 9%, .82) 60%, hsla(0, 0%, 9%, .75) 65%, hsla(0, 0%, 9%, .63) 70%, hsla(0, 0%, 9%, .45) 75%, hsla(0, 0%, 9%, .27) 80%, hsla(0, 0%, 9%, .15) 85%, hsla(0, 0%, 9%, .08) 90%, hsla(0, 0%, 9%, .03) 95%, hsla(0, 0%, 9%, 0));
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: -200px;
+                    z-index: -1;
+                }
+
+                .image {
+                    position: relative;
+                    display: flex;
+                    width: 90% !important;
+                    max-width: 100%;
+                    width: fit-content;
+                    height: fit-content;
+                    object-fit: contain;
+                    margin-bottom: 2em;
+                }
+
+                .title {
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 30px;
+                }
+
+                .generalInfo {
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    color: #a3a3a3;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+
+                    span {
+                        border: 1px solid #a3a3a3;
+                        margin: 0 .5em;
+                        padding: 0 .3em;
+                    }
+                }
+
+                .description {
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+
+                .extraInfo {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    width: fit-content;
+                    height: fit-content;
+                    color: #fff;
+
+                    span {
+                        color: #a3a3a3;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .itemImage {
+            display: flex;
+            width: fit-content;
+            height: 100%;
+            flex: 1 1 auto;
+            justify-content: center;
+            align-items: center;
+
+            .imageContainer {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background-image: url('https://occ-0-1837-1740.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABaJJIdyKMNvEcWhAtI5Xk12MQLY8DLxAkM2k8unVHyRordNL9Jn726cLoEmP_DAn44vwE3_l9dWTpDQTvmzsk6REyj4veXm9bvQ8.jpg?r=e19');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: bottom;
+
+                img {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .watch {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        background-image: linear-gradient(90deg, #333 5%, #181818 95%);
+        box-shadow: 8px 5px 16px 0 rgba(0, 0, 0, .37);
+        z-index: 21;
+        transform: translateY(-100%);
+        align-items: center;
+        justify-content: space-between;
+        padding: .7em .5em;
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+            gap: 1em;
+            padding: 0;
+            overflow: hidden;
+
+            svg {
+                flex: 0 0 21px;
+                height: 38px;
+                margin-left: 25px;
+            }
+
+            p {
+                position: relative;
+                display: flex;
+                width: fit-content;
+                color: #fff;
+                font-weight: 300;
+                font-size: 12pt;
+                white-space: nowrap;
+            }
+        }
+
+        .actions {
+            position: relative;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            margin-right: 1.5em;
+
+            a {
+                position: relative;
+                display: flex;
+                width: fit-content;
+                height: 33px;
+                padding: 9px 20px;
+                border-radius: 2px;
+                color: #fff;
+                justify-content: center;
+                align-items: center;
+                line-height: 13px;
+                font-size: 13px;
+                font-weight: 300;
+                background-color: #e50914;
+                background-image: linear-gradient(180deg, #e50914, #db0510);
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+                min-width: 112px;
+            }
+        }
+    }
+}
