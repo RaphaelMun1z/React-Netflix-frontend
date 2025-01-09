@@ -1,4 +1,4 @@
-## 📌 Dealership
+## 📌 Netflix
 
 <img src="./Banner Netflix.png"/>
 
